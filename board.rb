@@ -1,4 +1,5 @@
 # coding: utf-8
+require_relative "board_case"
 
 class Board
 
@@ -26,15 +27,23 @@ class Board
     #Method that prints the board game
     #We display the values of each of the cases according to their index, taking the value 'boardcase.new'
 
-    puts "          " + @board[0].status + " |" + @board[1].status + " |" + @board[2].status
-    puts "        ---------"
-    puts "          " + @board[3].status + " |" + @board[4].status + " |" + @board[5].status
-    puts "        ---------"
-    puts "          " + @board[6].status + " |" + @board[7].status + " |" + @board[8].status
+    puts ""
+    puts "                  " + @board[0].status + " | " + @board[1].status + " | " +  @board[2].status
+    puts "                 -------------"
+    puts "                  " + @board[3].status + " | " + @board[4].status + " | " +  @board[5].status
+    puts "                 -------------"
+    puts "                  " + @board[6].status + " | " + @board[7].status + " | " +  @board[8].status
+    puts ""
   end
 
   def   update_board(pos, value)
-    @board[pos] = value;
+    if (@board[pos].status == "O" or @board[pos].status == "X")
+      puts "please try again"
+      return (false)
+    else
+      @board[pos].status = value;
+      return (true)
+    end
   end
   #We create a method that checks out if the player wins
   def win

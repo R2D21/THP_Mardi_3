@@ -10,7 +10,11 @@ class BoardCase
     @@instances +=1
   end
 
+  def get_status
+    return @status
+  end
   def modif_status(new_status)
     @status = new_status
+    puts @status
   end
 end

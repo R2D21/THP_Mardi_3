@@ -9,4 +9,7 @@ class Player
   def name
     return @name
   end
+  def value
+    return @value
+  end
 end

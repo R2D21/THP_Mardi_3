@@ -1,11 +1,17 @@
 # coding: utf-8
 require_relative "player"
+require_relative "board"
 
 class Game
   def initialize
-    puts "Player one"
+    puts"================================================================="
+    puts " Welcome to the best Ruby TIC-TAC-TOE game of the whole universe"
+    sleep(1)
+    puts "                          And more ...                          "
+    puts"================================================================="
+    puts "Now Player one enter your name"
     @name_player_one = gets.chomp
-    puts "Player two"
+    puts "Now Player tow enter your name"
     @name_player_two = gets.chomp
 
     @player1 = Player.new(@name_player_one, "O")
@@ -14,7 +20,6 @@ class Game
   end
 
   def   aff_rules
-    puts"=================================="
     puts "=======> Comment jouer ? <======="
     sleep(3)
     puts "Voici les numéros qu'il faudra indiquer "
@@ -39,27 +44,45 @@ class Game
     puts "go"
   end
 
+  def play(string)
+    puts string + " it's your turn !\n"
+    puts "Enter a choice (between 1-9)\n"
+    @pos = gets.chomp.to_i
+    @pos -= 1
+  end
+
   def go
     # TO DO : lance la partie
-    aff_rules
-    while true
-      @board_game.print_board
-      player_back = @player2.name
-       if player_back.eql? @player2.name
-         puts "C'est à " + @player1.name + "\n"
-         puts "Enter a choice (between 1-9)\n"
-         @pos = gets.chomp.to_i
-         update_board(@pos, @player1.value)
-         player_back = @player1.name
-       elsif player_back.eql? @player1.name
-         puts "C'est à " + @player2.name + "\n"
-         puts "Enter a choice (between 1-9)\n"
-         @pos = gets.chomp.to_i
-         update_board(@pos, @player1.value)
-         player_back = @player2.name
-       else
-         puts "An error occured.\nplayer one or player missing"
-       end
+    # aff_rules
+    player_back = @player2.name
+    begin
+      while true
+        @board_game.print_board
+        if player_back.eql? @player2.name
+          puts @player1.name + " it's your turn !\n"
+          puts "Enter a choice (between 1-9)\n"
+          @pos = gets.chomp.to_i
+          @pos -= 1
+          while @board_game.update_board(@pos, @player1.value.to_s) != true
+            play(@player1.status)
+          end
+          player_back = @player1.name
+        elsif player_back.eql? @player1.name
+          puts @player2.name + " it's your turn !\n"
+          puts "Enter a choice (between 1-9)\n"
+          @pos = gets.chomp.to_i
+          @pos -= 1
+          while @board_game.update_board(@pos, @player2.value.to_s) != true
+            play(@player2.status)
+          end
+          player_back = @player2.name
+        else
+          puts "An error occured.\nplayer one or player missing"
+        end
+      end
+    rescue => e
+      puts "Please enter a number between 1 and 9"
+      retry
     end
   end
 
