@@ -3,7 +3,7 @@ class BoardCase
 #We create a class in order to define the frameworks of each instances
   attr_accessor :status, :nbre_case
   @@instances = 0
-  def initialize(status ="")
+  def initialize(status =" ")
 
     @status = status
     @nbre_case = nbre_case

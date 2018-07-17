@@ -1,5 +1,6 @@
 # coding: utf-8
 require_relative "player"
+
 class Game
   def initialize
     puts "Player one"
@@ -7,9 +8,9 @@ class Game
     puts "Player two"
     @name_player_two = gets.chomp
 
-    @player1 = Player.new(@name_player_one, @value_player_one)
-    @player2 = Player.new(@name_player_two, @value_player_two)
-    @board = Board.new
+    @player1 = Player.new(@name_player_one, "O")
+    @player2 = Player.new(@name_player_two, "X")
+    @board_game = Board.new
   end
 
   def   aff_rules
@@ -40,13 +41,25 @@ class Game
 
   def go
     # TO DO : lance la partie
+    aff_rules
     while true
-     aff_rules
-     @board.print_board
-     puts "C'est à " + @player1.name + "\n"
-     puts "Enter a choice (between 1-9)\n"
-     @pos = gets.chomp.to_i
-
+      @board_game.print_board
+      player_back = @player2.name
+       if player_back.eql? @player2.name
+         puts "C'est à " + @player1.name + "\n"
+         puts "Enter a choice (between 1-9)\n"
+         @pos = gets.chomp.to_i
+         update_board(@pos, @player1.value)
+         player_back = @player1.name
+       elsif player_back.eql? @player1.name
+         puts "C'est à " + @player2.name + "\n"
+         puts "Enter a choice (between 1-9)\n"
+         @pos = gets.chomp.to_i
+         update_board(@pos, @player1.value)
+         player_back = @player2.name
+       else
+         puts "An error occured.\nplayer one or player missing"
+       end
     end
   end
 

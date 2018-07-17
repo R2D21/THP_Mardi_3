@@ -21,6 +21,7 @@ class Board
               middle_left, middle_center, middle_right,
               down_left,down_middle, down_right]
   end
+
   def print_board
     #Method that prints the board game
     #We display the values of each of the cases according to their index, taking the value 'boardcase.new'
@@ -32,23 +33,26 @@ class Board
     puts "          " + @board[6].status + " |" + @board[7].status + " |" + @board[8].status
   end
 
+  def   update_board(pos, value)
+    @board[pos] = value;
+  end
   #We create a method that checks out if the player wins
   def win
-    if @array[0] == @array[1] && @array[0] == @array[2]
+    if @board[0] == @board[1] && @board[0] == @board[2]
       return true
-    elsif  @array[3] == @array[4] &&  @array[3] == @array[5]
+    elsif  @board[3] == @board[4] &&  @board[3] == @board[5]
       return true
-    elsif  @array[6] == @array[7] &&  @array[6] == @array[8]
+    elsif  @board[6] == @board[7] &&  @board[6] == @board[8]
       return true
-    elsif  @array[0] == @array[3] &&  @array[0] == @array[6]
+    elsif  @board[0] == @board[3] &&  @board[0] == @board[6]
       return true
-    elsif  @array[1] == @array[4] &&  @array[1] == @array[7]
+    elsif  @board[1] == @board[4] &&  @board[1] == @board[7]
       return true
-    elsif  @array[2] == @array[5] &&  @array[2] == @array[8]
+    elsif  @board[2] == @board[5] &&  @board[2] == @board[8]
       return true
-    elsif  @array[0] == @array[4] &&  @array[0] == @array[8]
+    elsif  @board[0] == @board[4] &&  @board[0] == @board[8]
       return true
-    elsif  @array[2] == @array[4] &&  @array[2] == @array[6]
+    elsif  @board[2] == @board[4] &&  @board[2] == @board[6]
       return true
     end
   end
