@@ -28,5 +28,11 @@ class Board
     puts "        ---------"
     puts "          " + @board[6].status + " |" + @board[7].status + " |" + @board[8].status
   end
-
+  def is_win()
+    win_up = [0,1,2]
+    win_middle = [3,4,5]
+    win_bottom = [6,7,8]
+    win_diagonal_left = [0,4,8]
+    win_diagonal_right = [2,4,6]
+  end
 end

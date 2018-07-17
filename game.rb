@@ -2,6 +2,9 @@
 class Game
   def initialize
     #TO DO : créé 2 joueurs, créé un board
+    player1 = new.Player
+    player2 = new.Player
+    board = new.Board
   end
 
   def go
