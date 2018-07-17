@@ -86,25 +86,4 @@ class Board
     end
     false
   end
-  def win
-    puts @board[0].status +" "+ @board[1].status + "" + @board[2].status
-    if @board[0].status == @board[1].status && @board[0].status == @board[2].status
-      return true
-    elsif  @board[3].status == @board[4].status &&  @board[3].status == @board[5].status
-      return true
-    elsif  @board[6].status == @board[7].status &&  @board[6].status == @board[8].status
-      return true
-    elsif  @board[0].status == @board[3].status &&  @board[0].status == @board[6].status
-      return true
-    elsif  @board[1].status == @board[4].status &&  @board[1].status == @board[7].status
-      return true
-    elsif  @board[2].status == @board[5].status &&  @board[2].status == @board[8].status
-      return true
-    elsif  @board[0].status == @board[4].status &&  @board[0].status == @board[8].status
-      return true
-    elsif  @board[2].status == @board[4].status &&  @board[2].status == @board[6].status
-      return true
-    end
-    return false
-  end
 end
