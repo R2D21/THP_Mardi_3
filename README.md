@@ -1,5 +1,5 @@
 # THP_Mardi_3
 
-  ![alt tag](https://user-images.githubusercontent.com/40149119/42834154-90e47960-89f6-11e8-9847-1766079d52b8.jpg)
+  ![alt tag](https://user-images.githubusercontent.com/40149119/42836366-2422061c-89fb-11e8-95f9-a6705a3de305.png)
 
 
