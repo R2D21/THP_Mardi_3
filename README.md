@@ -3,5 +3,5 @@
 ######To start the game, launch the "Morback.rb" file
 ######Follow the rules displayed inside your terminal
 ##And And may the best one win!
-# :copyright: Rémi Boivin & Jérémie Edery
+### :copyright: Rémi Boivin & Jérémie Edery
 >
