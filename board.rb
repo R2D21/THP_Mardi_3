@@ -32,13 +32,13 @@ class Board
     puts "          " + @board[6].status + " |" + @board[7].status + " |" + @board[8].status
   end
   
-  
+  #We create a method that checks out if the player wins
   def is_win()
-    if @board[0] == @board[1] && @board[0] == @board[2]
+    if @board[0] == @board[1] && @board[0] == @board[2] #top horizontal line 
       return true
-    elsif @board[3] == @board[4] && @board[3] == @board[5]
+    elsif @board[3] == @board[4] && @board[3] == @board[5] #middle horizontal line
       return true
-    elsif @board[6] == @board[7] && @board[6] == @board[8]
+    elsif @board[6] == @board[7] && @board[6] == @board[8] #bottom horizontal line
       return true
   end
 end
