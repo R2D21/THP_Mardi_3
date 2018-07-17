@@ -1,3 +1,12 @@
-#                                               Welcome to tic tac toe
-                                               <h1>This a Tic Tac Toe game</h1>
-<img src="https://user-images.githubusercontent.com/40149119/42836366-2422061c-89fb-11e8-95f9-a6705a3de305.png"></img>
+# THP_Mardi_3
+<p style="text-align: center;"
+                                                 :small_red_triangle: # Tic Tac Toe Game  :small_red_triangle_down: >
+<p align="center">
+  <img /> ![alt tag](https://user-images.githubusercontent.com/40149119/42834154-90e47960-89f6-11e8-9847-1766079d52b8.jpg") </p>
+<p style="text-align: center;"
+##This Tic Tac toe game is entirely programmed in Ruby :ruby:
+######To start the game, launch the "Morback.rb" file
+######Follow the rules displayed inside your terminal
+##And And may the best one win!
+# :copyright: Rémi Boivin & Jérémie Edery
+>

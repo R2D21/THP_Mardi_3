@@ -46,23 +46,57 @@ class Board
     end
   end
   #We create a method that checks out if the player wins
+  def victory
+    victory_lines || victory_columns || victory_diagonal
+  end
+  def victory_lines
+    victory_lines = [[0,1,2],[3,4,5],[6,7,8]]
+    victory_lines.each do |line|
+      line_str = ''
+      line.each { |x| line_str << @board[x].status }
+      return true if ['XXX', 'OOO'].include? line_str
+    end
+    false
+  end
+
+  def victory_columns
+    victory_columns = [[0,3,6],[1,4,7],[2,5,8]]
+    victory_columns.each do |column|
+      column_str = ''
+      column.each { |x| column_str << @board[x].status }
+      return true if ['XXX', 'OOO'].include? column_str
+    end
+    false
+  end
+
+  def victory_diagonal
+    victory_diagonal = [[0,4,8],[2,4,6]]
+    victory_diagonal.each do |diagonal|
+      diagonal_str = ''
+      diagonal.each { |x| diagonal_str << @board[x].status }
+      return true if ['XXX', 'OOO'].include? diagonal_str
+    end
+    false
+  end
   def win
-    if @board[0] == @board[1] && @board[0] == @board[2]
+    puts @board[0].status +" "+ @board[1].status + "" + @board[2].status
+    if @board[0].status == @board[1].status && @board[0].status == @board[2].status
       return true
-    elsif  @board[3] == @board[4] &&  @board[3] == @board[5]
+    elsif  @board[3].status == @board[4].status &&  @board[3].status == @board[5].status
       return true
-    elsif  @board[6] == @board[7] &&  @board[6] == @board[8]
+    elsif  @board[6].status == @board[7].status &&  @board[6].status == @board[8].status
       return true
-    elsif  @board[0] == @board[3] &&  @board[0] == @board[6]
+    elsif  @board[0].status == @board[3].status &&  @board[0].status == @board[6].status
       return true
-    elsif  @board[1] == @board[4] &&  @board[1] == @board[7]
+    elsif  @board[1].status == @board[4].status &&  @board[1].status == @board[7].status
       return true
-    elsif  @board[2] == @board[5] &&  @board[2] == @board[8]
+    elsif  @board[2].status == @board[5].status &&  @board[2].status == @board[8].status
       return true
-    elsif  @board[0] == @board[4] &&  @board[0] == @board[8]
+    elsif  @board[0].status == @board[4].status &&  @board[0].status == @board[8].status
       return true
-    elsif  @board[2] == @board[4] &&  @board[2] == @board[6]
+    elsif  @board[2].status == @board[4].status &&  @board[2].status == @board[6].status
       return true
     end
+    return false
   end
 end
