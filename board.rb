@@ -29,9 +29,9 @@ class Board
 
     puts ""
     puts "                  " + @board[0].status + " | " + @board[1].status + " | " +  @board[2].status
-    puts "                 -------------"
+    puts "                -------------"
     puts "                  " + @board[3].status + " | " + @board[4].status + " | " +  @board[5].status
-    puts "                 -------------"
+    puts "                -------------"
     puts "                  " + @board[6].status + " | " + @board[7].status + " | " +  @board[8].status
     puts ""
   end

@@ -11,7 +11,7 @@ class Game
     puts"================================================================="
     puts "Now Player one enter your name"
     @name_player_one = gets.chomp
-    puts "Now Player tow enter your name"
+    puts "Now Player two enter your name"
     @name_player_two = gets.chomp
 
     @player1 = Player.new(@name_player_one, "O")

@@ -1,7 +1,13 @@
 # Tic Tac Toe Game  :small_red_triangle_down:
 <img src="https://user-images.githubusercontent.com/40149119/42834154-90e47960-89f6-11e8-9847-1766079d52b8.jpg"></img></br>
 ## This Tic Tac toe game is entirely programmed in Ruby</br>
+## Program objective
+Mastering OOP in Ruby
 #### To start the game, launch the "Morback.rb" file
-Follow the rules displayed inside your terminal
-And And may the best one win!
+##
+    The program must be two (not with artificial inteligence)
+    The program begins by asking the names of the players
+    The program prints the board
+    Once  one of the players aligns three squares in a row, the program says who is the winner
+And may the best one win!
 ### :copyright: Rémi Boivin & Jérémie Edery
