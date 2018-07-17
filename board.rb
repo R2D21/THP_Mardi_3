@@ -24,11 +24,21 @@ class Board
   def print_board
 #Method that prints the board game  
 #We display the values of each of the cases according to their index, taking the value 'boardcase.new'
-    puts "          " + @board[0].status + " |" + @board[1].status + " |" + @board[2].status
+
+ puts "          " + @board[0].status + " |" + @board[1].status + " |" + @board[2].status
     puts "        ---------"
     puts "          " + @board[3].status + " |" + @board[4].status + " |" + @board[5].status
     puts "        ---------"
     puts "          " + @board[6].status + " |" + @board[7].status + " |" + @board[8].status
   end
-
+  
+  
+  def is_win()
+    if @board[0] == @board[1] && @board[0] == @board[2]
+      return true
+    elsif @board[3] == @board[4] && @board[3] == @board[5]
+      return true
+    elsif @board[6] == @board[7] && @board[6] == @board[8]
+      return true
+  end
 end
