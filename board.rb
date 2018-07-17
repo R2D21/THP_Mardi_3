@@ -29,10 +29,11 @@ class Board
     puts "          " + @board[6].status + " |" + @board[7].status + " |" + @board[8].status
   end
   def is_win()
-    win_up = [0,1,2]
-    win_middle = [3,4,5]
-    win_bottom = [6,7,8]
-    win_diagonal_left = [0,4,8]
-    win_diagonal_right = [2,4,6]
+    if @board[0] == @board[1] && @board[0] == @board[2]
+      return true
+    elsif @board[3] == @board[4] && @board[3] == @board[5]
+      return true
+    elsif @board[6] == @board[7] && @board[6] == @board[8]
+      return true
   end
 end
