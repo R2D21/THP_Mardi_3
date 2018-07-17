@@ -6,3 +6,4 @@ class Player
   def initialize
     #TO DO : doit régler son nom, sa valeur, son état de victoire
   end
+end

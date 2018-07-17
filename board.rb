@@ -9,6 +9,15 @@ class Board
     #TO DO :
     #Quand la classe s'initialize, elle doit créer 9 instances BoardCases
     #Ces instances sont rangées dans une array qui est l'attr_accessor de la classe
+    left_up = BoardCase.new
+    left_up_middle = BoardCase.new
+    left_up_right = BoardCase.new
+    middle_left = BoardCase.new
+    middle_middle = BoardCase.new
+    left_up_right = BoardCase.new
+    left_up = BoardCase.new
+    left_up_middle = BoardCase.new
+    left_up_right = BoardCase.new
   end
 
   def to_s
