@@ -1,9 +1,6 @@
 # coding: utf-8
 
 class Board
-  include Enumerable
-  #TO DO : la classe a 1 attr_accessor, une array qui contient les BoardCases
-
 
   def initialize
     #TO DO :
@@ -14,21 +11,14 @@ class Board
     left_up_right = BoardCase.new
     middle_left = BoardCase.new
     middle_middle = BoardCase.new
-    left_up_right = BoardCase.new
-    left_up = BoardCase.new
-    left_up_middle = BoardCase.new
-    left_up_right = BoardCase.new
-  end
+    middle_right = BoardCase.new
+    down_up = BoardCase.new
+    down_middle = BoardCase.new
+    down_right = BoardCase.new
 
-  def to_s
-  #TO DO : afficher le plateau
+ @board = [left_up, left_middle, left_right,
+   middle_left, middle_middle, middle_right,
+    down_up,down_middle, down_right]
 
-  end
 
-  def play
-    #TO DO : une méthode qui change la BoardCase jouée en fonction de la valeur du joueur (X, ou O)
-  end
-
-  def victory?
-    #TO DO : qui gagne ?
-  end
+end
