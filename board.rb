@@ -59,6 +59,14 @@ class Board
     false
   end
 
+  def is_full?
+    @board.each do |boardcase|
+      return false if boardcase.to_s == ' '
+    end
+    true
+    puts" Game over"
+  end
+
   def victory_columns
     victory_columns = [[0,3,6],[1,4,7],[2,5,8]]
     victory_columns.each do |column|

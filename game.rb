@@ -55,7 +55,7 @@ class Game
     # TO DO : lance la partie
     # aff_rules
     player_back = @player2.name
-    # begin
+    begin
       while @board_game.victory == false do
         @board_game.print_board
         if player_back.eql? @player2.name
@@ -80,10 +80,10 @@ class Game
           puts "An error occured.\nplayer one or player missing"
         end
       end
-    # rescue => e
-    #   puts "Please enter a number between 1 and 9"
-    #   retry
-    # end
+    rescue  => e
+      puts "Rescued Please enter a number between 1 and 9"
+      retry
+    end
   end
 
   def turn
