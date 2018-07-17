@@ -10,7 +10,7 @@ class BoardCase
     @@instances +=1
   end
 
-  def to_s
-    #TO DO : doit renvoyer la valeur au format string
+  def modif_status(new_status)
+    @status = new_status
   end
 end
