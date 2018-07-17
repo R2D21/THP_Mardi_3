@@ -16,7 +16,7 @@ class Board
     down_middle = BoardCase.new
     down_right = BoardCase.new
     
-#we put all the cases inside of an array in order to know the position of each of the cases
+#we put all the cases inside of an array in order later to know the position of each of the cases
     @board = [left_up, up_center, up_right,
               middle_left, middle_center, middle_right,
               down_left,down_middle, down_right]
