@@ -22,7 +22,7 @@ class Board
               down_left,down_middle, down_right]
   end
   def print_board
-    
+#Method that prints the board game  
 #We display the values of each of the cases according to their index, taking the value 'boardcase.new'
     puts "          " + @board[0].status + " |" + @board[1].status + " |" + @board[2].status
     puts "        ---------"
