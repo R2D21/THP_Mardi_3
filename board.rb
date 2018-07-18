@@ -35,8 +35,8 @@ class Board
     puts "                  " + @board[6].status + " | " + @board[7].status + " | " +  @board[8].status
     puts ""
   end
-
-  def   update_board(pos, value)
+#method that defines the positions of each symbols (O & X)
+  def   update_board(pos, value) 
     if (@board[pos].status == "O" or @board[pos].status == "X")
       puts "please try again"
       return (false)
@@ -45,12 +45,12 @@ class Board
       return (true)
     end
   end
-  #We create a method that checks out if the player wins
+  #We create a method that checks out if the player wins in horizontal
   def victory
     victory_lines || victory_columns || victory_diagonal
   end
   def victory_lines
-    victory_lines = [[0,1,2],[3,4,5],[6,7,8]]
+    victory_lines = [[0,1,2],[3,4,5],[6,7,8]]  #winning horizontal lines 
     victory_lines.each do |line|
       line_str = ''
       line.each { |x| line_str << @board[x].status }
@@ -58,7 +58,7 @@ class Board
     end
     false
   end
-
+#we define a method that ends the game is the board ens up being full, it returns false, no one wins
   def is_full?
     @board.each do |boardcase|
       return false if boardcase.to_s == ' '
@@ -66,6 +66,7 @@ class Board
     true
     puts" Game over"
   end
+  #We create a method that checks out if the player wins in vertical
 
   def victory_columns
     victory_columns = [[0,3,6],[1,4,7],[2,5,8]]
@@ -76,6 +77,7 @@ class Board
     end
     false
   end
+  #We create a method that checks out if the player wins in diagonal
 
   def victory_diagonal
     victory_diagonal = [[0,4,8],[2,4,6]]
