@@ -20,10 +20,10 @@ class Game
   end
 
   def   aff_rules
-    puts "=======> Comment jouer ? <======="
+    puts "=======> how to play ? <======="
     sleep(3)
-    puts "Voici les numéros qu'il faudra indiquer "
-    puts "pour placer vos pions :"
+    puts "Here are the numbers you have to enter"
+    puts "place your pawns:"
     sleep(3)
     puts "  1 | 2 | 3 "
     puts "-------------"
