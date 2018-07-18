@@ -10,5 +10,5 @@ Mastering OOP in Ruby
    * The program prints the board, and then you're good to go
    * Once one of the players aligns three squares in a row, the program nominates the winner 
    
-                            ##May the best one win!
+##May the best one win!
 ### :copyright: Rémi Boivin & Jérémie Edery
