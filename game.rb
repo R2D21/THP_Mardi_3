@@ -53,7 +53,7 @@ class Game
 
   def go
     # TO DO : lance la partie
-    # aff_rules
+    aff_rules
     player_back = @player2.name
     begin
       while @board_game.victory == false do
